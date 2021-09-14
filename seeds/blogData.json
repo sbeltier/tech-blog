@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "author": "Sarah",
+        "title": "the best blog ever",
+        "date": "September 14, 2021",
+        "content": "gobblygook the blog post",
+        "comment": "gobblygook"
+    },
+    {
+        "id": 2,
+        "author": "Jimmy",
+        "title": "the next best blog ever",
+        "date": "September 14, 2021",
+        "content": "gobblygook the blog post",
+        "comment": "gobblygook"
+    }
+]
