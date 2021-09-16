@@ -49,14 +49,18 @@ router.get('/blog/:id', async (req, res) => {
     }
   });
 
-// // Login Route
-// router.get('/login', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/');
-//       return;
-//     }
-//     res.render('login');
-//   });
+// Login Route
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+    res.render('login');
+  });
 
+// Route for register page
+router.get('/register', (req, res) => {
+  res.render('register')
+})
 
 module.exports = router;
