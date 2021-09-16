@@ -15,7 +15,7 @@ button_SubmitComment.addEventListener('click', function () {
     console.log('phase 1')
     console.log(comment)
 
-    fetch('/api/blog/comment', {
+    fetch('/api/comment', {
         method: "POST",
         body: JSON.stringify({comment: comment}),
         headers: { 'Content-Type': 'application/json' }
