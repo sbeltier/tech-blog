@@ -20,14 +20,22 @@ Comment.init(
       allowNull: false,
     },
     comment: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },    
+      type: DataTypes.STRING,
+      allowNull: false
+    },    
       blog_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Blog',
+            model: 'blog',
+            key: 'id'
+        },
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'user',
             key: 'id'
         },
       }

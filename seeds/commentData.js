@@ -8,7 +8,8 @@ const commentData =
         "author": "Sarah",
         "date": "September 14, 2021",
         "comment": "gobblygook comment",
-        "blog_id": 1
+        "blog_id": 1,
+        "user_id": 1
     }
 
 ]

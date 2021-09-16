@@ -8,8 +8,7 @@ const blogData =
         "title": "the best blog ever",
         "date": "September 14, 2021",
         "content": "gobblygook the blog post",
-        "comment": "gobblygook",
-        "user_id": 1
+        "user_id": 1,
     }
 ]
 
