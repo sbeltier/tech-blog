@@ -23,7 +23,7 @@ router.get('/', /* enable later withAuth, */ async (req, res) => {
     })
 
 
-// GET one blog
+// GET Blog
 router.get('/blog/:id', async (req, res) => {
     try {
       const dbBlogData = await Blog.findByPk(req.params.id, {
