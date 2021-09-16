@@ -3,7 +3,7 @@ const { User, Comment, Blog } = require('../../models');
 const { restore } = require('../../models/User');
 
 // Create new Comment
-router.post('/comment', async (req, res) => {
+router.post('/', async (req, res) => {
     console.log('trying to create new comment')
     console.log(JSON.stringify(req.body))
 
@@ -12,11 +12,11 @@ router.post('/comment', async (req, res) => {
         const newComment = await Comment.create({
             comment: req.body.comment,
             author: 'Sarah',
-            date: "Setpember 16, 2021",
+            date: "September 16, 2021",
             blog_id: 1,
             user_id: 1
             // user_id: req.session.user_id,
-        })
+        }).then(newComment) 
         console.log(newComment)
         console.log('Comment Created')
         res.render('blog-comment-section', {
