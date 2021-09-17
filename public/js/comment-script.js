@@ -28,6 +28,8 @@ button_SubmitComment.addEventListener('click', function () {
                 // Close Form
                 const form = document.getElementById('form')
                 form.setAttribute('style', 'display: none;')
+                document.location.replace('/');
+
             } else {
             alert('Comment not submitted')
         }

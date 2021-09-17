@@ -9,18 +9,36 @@ router.post('/', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
+    console.log("TRYING TO CREATE A USER")
+    console.log(req.body)
+    res.redirect('/homepage')
 
-    // TODO: Set up sessions with the 'loggedIn' variable
+
     req.session.save(() => {
-      // TODO: Set the 'loggedIn' session variable to 'true'
-
+      req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
+
+// Route for register page
+router.get('/register', (req, res) => {
+  res.render('register')
+})
+
+
+// Route for login page
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
+
 
 // Login
 router.post('/login', async (req, res) => {
@@ -47,8 +65,9 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
-      // TODO: Once the user successfully logs in, set up sessions with the 'loggedIn' variable
+      req.session.loggedIn = true;
 
       res
         .status(200)
@@ -59,6 +78,9 @@ router.post('/login', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
 
 // Logout
 router.post('/logout', (req, res) => {
