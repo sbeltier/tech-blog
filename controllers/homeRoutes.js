@@ -19,7 +19,6 @@ router.get('/', /* enable later withAuth, */ async (req, res) => {
         console.log(err);
         res.status(500).json(err)
     }
-        
     })
 
 
@@ -48,6 +47,8 @@ router.get('/blog/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
 
 // Login Route
 router.get('/login', (req, res) => {

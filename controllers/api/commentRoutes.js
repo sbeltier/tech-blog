@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Comment, Blog } = require('../../models');
-const { restore } = require('../../models/User');
 
 // Create new Comment
 router.post('/', async (req, res) => {
@@ -22,6 +21,7 @@ router.post('/', async (req, res) => {
         res.render('blog-comment-section', {
             newComment
         });
+        res.redirect('/')
         console.log("is this working?")
     } catch (err) {
         res.status(500).json(err);
