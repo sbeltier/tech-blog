@@ -33,8 +33,9 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
     console.log("THIS IS WORKING")
-      document.location.replace('/')      
-  
+      // document.location.replace('/')      
+      console.log("===========================")
+      console.log(response)
       if (response.ok) {
         console.log("this worked?")
       } else {
@@ -43,10 +44,10 @@ const loginFormHandler = async (event) => {
     }
   };
   
-  document.getElementById('loginButton')
-    .addEventListener('submit', loginFormHandler);
+  // document.getElementById('loginForm')
+  //   .addEventListener('submit', loginFormHandler);
   
   document
-    .getElementById('registerButton')
+    .getElementById('registerForm')
     .addEventListener('submit', signupFormHandler);
   

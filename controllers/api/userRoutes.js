@@ -9,9 +9,7 @@ router.post('/', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-    console.log("TRYING TO CREATE A USER")
-    console.log(req.body)
-    res.redirect('/homepage')
+    res.redirect('/')
 
 
     req.session.save(() => {
@@ -24,21 +22,6 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-// Route for register page
-router.get('/register', (req, res) => {
-  res.render('register')
-})
-
-
-// Route for login page
-router.get('/login', (req, res) => {
-  res.render('login')
-})
-
-
 
 // Login
 router.post('/login', async (req, res) => {

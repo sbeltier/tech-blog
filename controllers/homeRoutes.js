@@ -22,7 +22,7 @@ router.get('/', /* enable later withAuth, */ async (req, res) => {
     })
 
 
-// GET Blog
+// GET Single Blog
 router.get('/blog/:id', async (req, res) => {
     try {
       const dbBlogData = await Blog.findByPk(req.params.id, {
@@ -49,7 +49,10 @@ router.get('/blog/:id', async (req, res) => {
   });
 
 
-
+// Route for login page
+router.get('/login', (req, res) => {
+  res.render('login')
+})
 
 
 // Route for register page
